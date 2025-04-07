@@ -4,6 +4,7 @@ public class BulletInjection : MonoBehaviour
 {
     [SerializeField] float speed = 15f;
     [SerializeField] float lifeTime = 2f;
+    [SerializeField] AudioManager audioManager;
 
     private Vector2 direction;
     private Vector2 inheritedVelocity = Vector2.zero;
@@ -19,6 +20,7 @@ public class BulletInjection : MonoBehaviour
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         Destroy(gameObject, lifeTime);
     }
 
@@ -32,12 +34,15 @@ public class BulletInjection : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+
             Debug.Log("bullet hit enemtyy");
             Destroy(gameObject);
 
             Animator enemyAnim = collision.GetComponent<Animator>();
             enemyAnim.Play("attacked");
+            audioManager.PlayHitSound();
         }
+
 
         if (collision.CompareTag("CamWall"))
         {

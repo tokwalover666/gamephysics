@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPR_DoctorPlayer_0: 6776889168536038365
+      SPR_DoctorPlayer_1: -3052628600168555569
+      SPR_DoctorPlayer_2: 8909452620440092150
+      SPR_DoctorPlayer_3: 4243175366744490333
+      SPR_DoctorPlayer_4: -2296099326337090862
+      SPR_DoctorPlayer_5: 1155105622105934474
+      SPR_DoctorPlayer_6: -3491615486791402707
+      SPR_DoctorPlayer_7: 356289847071555929
+      SPR_DoctorPlayer_8: -761041833021451262
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

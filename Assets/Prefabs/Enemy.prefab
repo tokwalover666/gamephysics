@@ -138,7 +138,7 @@ MonoBehaviour:
   throwPoint: {fileID: 1329024505767906729}
   throwForce: 10
   upwardForce: 5
-  attackRate: 2
+  attackRate: 10
   attackRange: 10
 --- !u!61 &6233014254150267011
 BoxCollider2D:

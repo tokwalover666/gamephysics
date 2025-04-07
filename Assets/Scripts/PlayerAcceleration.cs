@@ -8,17 +8,19 @@ public class PlayerAcceleration : MonoBehaviour
     [SerializeField] float verticalSpeed = 5f;
     [SerializeField] GameStart gameStart;
     [SerializeField] Animator playerAnim;
+    [SerializeField] AudioManager audioManager;
 
     public GameObject bulletInjectionPrefab;
     public Transform firePoint;
 
     private Rigidbody2D rb;
-    private Vector2 aimDirection = Vector2.right; // Default aim right
+    private Vector2 aimDirection = Vector2.right; 
 
     void Start()
     {
+        audioManager.PlayStartSound();
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f; // Disable gravity for full control over vertical movement
+        rb.gravityScale = 0f;
     }
 
     void FixedUpdate()
@@ -45,6 +47,7 @@ public class PlayerAcceleration : MonoBehaviour
         {
             playerAnim.SetTrigger("isAttacking");
             Shoot();
+            audioManager.PlayShootSound();
         }
     }
 
@@ -58,7 +61,7 @@ public class PlayerAcceleration : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow)) aimDirection += Vector2.right;
 
         if (aimDirection == Vector2.zero)
-            aimDirection = Vector2.right; // Default aiming direction
+            aimDirection = Vector2.right; 
     }
 
     void Shoot()

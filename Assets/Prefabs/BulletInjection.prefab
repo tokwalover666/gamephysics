@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   lifeTime: 2
+  audioManager: {fileID: 2459557229196682651, guid: 6f6e976a4547a634fa7bf53c9238bab2, type: 3}
 --- !u!61 &1811589618244292100
 BoxCollider2D:
   m_ObjectHideFlags: 0

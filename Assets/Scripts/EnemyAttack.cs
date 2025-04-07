@@ -49,15 +49,15 @@ public class EnemyAttack : MonoBehaviour
             Vector2 target = player.position;
             Vector2 origin = throwPoint.position;
 
-            float gravity = Physics2D.gravity.y * rb.gravityScale; // real gravity
-            float timeToHit = 0.8f; // tweak this for higher/faster arc
+            float gravity = Physics2D.gravity.y * rb.gravityScale;
+            float timeToHit = 0.8f;
 
-            // Calculate velocity needed to hit target in given time
             Vector2 velocity = CalculateTrajectory(origin, target, gravity, timeToHit);
 
             rb.linearVelocity = velocity;
         }
-
+        Animator enemyAnim = GetComponent<Animator>();
+        enemyAnim.Play("throw");
         Debug.Log("Enemy threw a projectile!");
     }
 

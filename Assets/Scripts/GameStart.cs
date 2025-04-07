@@ -5,8 +5,9 @@ public class GameStart : MonoBehaviour
     [SerializeField] Animator fadeAnim;
     [SerializeField] GameObject titleScreen;
 
+
     public bool gameStarted = false;
-    public string fadeInStateName = "fadeIn";   // Name of the fade-in animation state
+    public string fadeInStateName = "fadeIn";   
     public string fadeOutTriggerName = "isFadingOut";
 
     private bool waitingToFadeOut = false;
@@ -18,7 +19,6 @@ public class GameStart : MonoBehaviour
             StartGame();
         }
 
-        // Wait for fade-in animation to finish, then trigger fade-out
         if (waitingToFadeOut)
         {
             AnimatorStateInfo stateInfo = fadeAnim.GetCurrentAnimatorStateInfo(0);
