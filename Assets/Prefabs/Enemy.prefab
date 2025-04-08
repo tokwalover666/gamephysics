@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1059033312153470449, guid: 4c651f065e28b614fa44ac2454381264, type: 3}
   throwPoint: {fileID: 1329024505767906729}
-  throwForce: 10
+  throwForce: 14
   upwardForce: 5
   attackRate: 10
   attackRange: 10
@@ -178,7 +178,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5625, y: 2.4375}
+    oldSize: {x: 1.25, y: 1.95}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

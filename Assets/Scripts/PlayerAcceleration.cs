@@ -43,7 +43,7 @@ public class PlayerAcceleration : MonoBehaviour
     {
         HandleAiming();
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             playerAnim.SetTrigger("isAttacking");
             Shoot();

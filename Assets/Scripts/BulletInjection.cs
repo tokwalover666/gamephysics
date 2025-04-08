@@ -49,5 +49,11 @@ public class BulletInjection : MonoBehaviour
             Debug.Log("bullet hit cam wall");
             Destroy(gameObject);
         }
+
+        if (collision.CompareTag("enemyBomb"))
+        {
+            Debug.Log("bbomb");
+            Destroy(gameObject);
+        }
     }
 }

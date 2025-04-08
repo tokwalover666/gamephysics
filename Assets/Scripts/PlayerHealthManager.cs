@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    public int maxHits = 5;
+    public int maxHits = 10;
     public GameObject gameOverScreen;
     public Image[] heartIcons; 
 
